@@ -1,0 +1,64 @@
+<template name="masterDetail">
+    
+<br>
+<div id='A' class='span3 border'>
+     {{#if currentUser}}
+
+   <!--          <input id='editSwitch' 
+                    type="checkbox" 
+                    name="editmode">edit -->
+            <a id='deleteMasterItem' 
+                href="#">delete
+            </a>
+
+            <a class='createButton' 
+                id='createMasterItem' 
+                href="#">create
+            </a>
+
+        {{/if}}
+     
+            {{#each posts}}
+                {{> masterItem}}
+            {{/each}}
+</div>
+ <div id='B' class='span4 border'>
+    {{#if currentUser}}
+
+   <!--      <a class='createButton' 
+           id='createDetailsItem' 
+           href="#">create page
+        </a> -->
+
+        <a class='saveButton' 
+           id='saveDetailsItem' 
+           href="#">save
+        </a>
+
+    {{/if}}
+
+    {{#each details}}
+        {{> detailsItem}}
+    {{/each}}
+</div>
+
+
+</template>
+
+
+        <!-- <div class="posts-container  span2">
+            {{#if currentUser}}
+                <input id='editSwitch' type="checkbox" name="editmode">edit
+                <a class='createButton' id='createMasterItem' href="#">create</a>
+            {{/if}}
+         
+                {{#each posts}}
+                    {{> masterItem}}
+                {{/each}}
+     
+        </div>
+
+        <div class="details-container span8 offset2">  
+            
+    
+        </div> -->

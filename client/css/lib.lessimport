@@ -1,0 +1,77 @@
+//http://css3beziercurve.net
+
+
+@import url(http://fonts.googleapis.com/css?family=Jura|Play);
+
+@main-font-color: #3D4470;
+@fontA: Play;
+@active-color: orange;
+
+
+.error(@borderWidth: 2px)
+{
+  border: @borderWidth solid #F00;
+  color: #000000;
+}
+
+
+.hover(@time)
+{
+  transition: color @time ease-in-out 0ms; //explorer 10
+  -webkit-transition: color @time ease-in-out 0ms; // chrome & safari
+  -moz-transition: color @time ease-in-out 0ms; // firefox
+  -o-transition: color @time ease-in-out 0ms; // opera
+}
+
+
+.transition(@prop, @time)
+{
+  transition: @prop @time ease-in-out 0ms; // explorer 10
+  -webkit-transition: @prop @time ease-in-out 0ms; // chrome & safari
+  -moz-transition: @prop @time ease-in-out 0ms; // firefox
+  -o-transition: @prop @time ease-in-out 0ms; // opera
+
+}
+
+.border-radius( @top-left, @top-right, @bottom-left, @bottom-right )
+{
+  -webkit-border-radius: @top-left @top-right @bottom-left @bottom-right ;
+  -moz-border-radius: @top-left @top-right @bottom-left @bottom-right ;
+  border-radius: @top-left @top-right @bottom-left @bottom-right ;
+}
+
+
+.box-shadow(@h-shadow, @v-shadow, @blur, @spread, @color, @inset:outer)
+{//box-shadow: h-shadow v-shadow blur spread color inset;
+  -webkit-box-shadow: @h-shadow @v-shadow @blur @spread @color @inset;   // WebKit
+  -moz-box-shadow: @h-shadow @v-shadow @blur @spread @color @inset;      // Firefox
+  box-shadow: @h-shadow @v-shadow @blur @spread @color @inset;           // Standard
+}
+
+
+.box-sizing(@value)
+{//box-sizing: content-box|border-box|inherit: http://www.w3schools.com/CSSref/css3_pr_box-sizing.asp
+  box-sizing:@value;
+  -moz-box-sizing:@value;
+  -webkit-box-sizing:@value;
+}
+
+
+* {
+  margin:0;
+  padding:0;
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
